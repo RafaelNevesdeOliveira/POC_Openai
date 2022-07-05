@@ -6,20 +6,6 @@ import { ServiceService } from './service.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
-  digimonList: any;
+export class AppComponent{
 
-  constructor(private service: ServiceService) {}
-
-  ngOnInit(): void {
-    this.getAll();
-  }
-
-  getAll() {
-    this.service
-      .getDigimonList().subscribe((res)=>{
-        this.digimonList = res
-        console.log(res)
-      })
-  }
 }

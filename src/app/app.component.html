@@ -1,25 +1,30 @@
-<ul class="nav nav-pills" style="padding: 10px">
+<ul class="nav nav-pills" style="display: flex;flex-direction: row;justify-content: center;gap:24px;padding: 12px;">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Service test.</a>
+    <a
+      class="nav-link"
+      aria-current="page"
+      routerLinkActive="active"
+      [routerLink]="['home']"
+      >home</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      aria-current="page"
+      routerLinkActive="active"
+      [routerLink]="['poc-service']"
+      >Service test.</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      aria-current="page"
+      routerLinkActive="active"
+      [routerLink]="['poc-form']"
+      >Poc Form.</a
+    >
   </li>
 </ul>
-
-<main style="padding:0 100px;">
-
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">Image</th>
-        <th scope="col">Nome</th>
-        <th scope="col">Nível</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of digimonList">
-        <td><img style="height: 80px;" src="{{item.img}}" alt=""></td>
-        <td>{{item.name}}</td>
-        <td>{{item.level}}</td>
-      </tr>
-    </tbody>
-  </table>
-</main>
+<router-outlet></router-outlet>
