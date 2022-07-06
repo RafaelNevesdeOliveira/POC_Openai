@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { PocFormComponent } from './pages/poc-form/poc-form.component';
 import { PocServiceComponent } from './pages/poc-service/poc-service.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ExtratoComponent } from './pages/extrato/extrato.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PocFormComponent,
     PocServiceComponent,
-    HomeComponent
+    HomeComponent,
+    ExtratoComponent
   ],
   imports: [
     BrowserModule,

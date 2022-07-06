@@ -16,7 +16,7 @@ export class PocFormComponent implements OnInit {
   ngOnInit(): void {}
 
   transferir() {
-    console.log('Solicitada nova transferência');
+    console.log('Solicitada nova transferência ');
     if(this.ehValido()){
       const emitirValor = { valor: this.valor, destino: this.destino };
       this.aoTransferir.emit(emitirValor);

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   title = 'bytebank';
-  transferencia: any
+  transferencias: any[] = []
 
   constructor() { }
 
@@ -17,11 +17,12 @@ export class HomeComponent implements OnInit {
 
   transferir($event:any){
     console.log($event);
-    this.transferencia = $event;
+    const transferencia = {...$event, data: new Date()};
+    this.transferencias.push(transferencia);
   }
 
   exibirModalErro(){
-    window.alert('agua mineral');
+    window.alert('Insira um valor correto');
 }
 
 }
