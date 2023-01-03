@@ -1,4 +1,14 @@
-<app-poc-form (aoTransferir)="transferir($event)" (valoresComErro)="exibirModalErro()"></app-poc-form>
+<div class="box-text">
+  <input
+    style="margin-right: 10px; width: 300px;"
+    [(ngModel)]="textToSend"
+    type="text"
+    placeholder="Digite uma sentença"
+  />
 
-<app-extrato [transferencias]="transferencias"></app-extrato>
+  <button (click)="generateImage()">Gerar imagem</button>
+</div>
 
+<div *ngIf="showImage">
+  <img  alt="url_name" src="{{ url_image }}" />
+</div>
